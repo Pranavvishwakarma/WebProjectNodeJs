@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Latest compiled and minified CSS -->
+   {{>headerlinks}}
+   
+  </head>
+  <body>
+   {{>navbar}}
+    <!-- main header  -->
+    <div class="container-fluid main_header">
+        <div class="row">
+          <div class="col-md-10 col-12 mx-auto">
+          
+
+
+          <div class="main_content">
+            <form action="" class="temp_form">
+                <input type="text" id="cityName" placeholder="Enter  your   city   name" autocomplete="off">
+                <input type="submit" value="Search" id="submitBtn">
+            </form>
+          </div>
+
+          <div class="tempinfo">
+            <div class="top_layer">
+                <p id="day">tuesda</p>
+                <p id="date">2024</p>
+                
+            </div>
+            <div class="main_layer">
+                <p id="city_name">
+output
+                </p>
+                <div class="middle_layer data_hide">
+   <p id="temp">Kelvin</p>
+   <p id="temp_status"><i class="fa fa-cloud" aria-hidden="true"></i></p>
+                </div>
+            </div>
+          </div>
+           
+            </div>
+
+          </div>
+        </div>
+    </div>
+  {{>footer}}
+  <script src="/js/main.js"></script>
+  <script>
+
+    
+
+    const getCurrentday=()=>{
+      const week=new Array(7);
+      week[0]="Sunday";
+      week[1]="Monday";
+      week[2]="Tuesday";
+      week[3]="wednesday";
+      week[4]="Thusday";
+      week[5]="Friday";
+      week[6]="Satarday";
+      let currentday=new Date();
+      const days=week[currentday.getDay()];
+     const day=document.getElementById('day');
+     
+     day.innerHTML=days;
+    }
+
+     const formonth=()=>{
+        const months=[
+            "Jan",
+            "Feb",
+            "March",
+            "April",
+            "May",
+            "June",
+            "July",
+            "Augast",
+            "Sep",
+            "Oct",
+            "Nav",
+            "Dec",
+        ];
+        var now=new Date();
+        var month=months[now.getMonth()+1];
+    
+       var dat=now.getDate()
+        //let hours=now.getHours();
+        //let mins=now.getMinutes();
+        
+       // let perios="AM";
+
+        //if(hours>11){
+          //  perios="PM";
+           // if(hours>12) hours-=12;
+        //}
+        //if(mins<10){
+          //  mins="0"+mins;
+       // }
+       let date = document.getElementById('date')
+
+    //    document.write(month+" "+" "+date+""+" "+hours);
+       
+       
+      date.innerHTML=`${dat},${month}`;
+    };
+    formonth();
+    getCurrentday();
+  </script>
+  </body>
+</html>

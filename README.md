@@ -56,6 +56,3 @@ This project relies on the OpenWeatherMap API to fetch real-time weather data. M
 ## Contributions
 
 Contributions are welcome! Whether you want to fix a bug, enhance existing features, or add new functionalities, feel free to fork the repository and submit a pull request.
-
-
-We hope this Real-Time Weather System adds value to your projects and provides users with a seamless experience for staying informed about the latest weather conditions. If you have any questions or suggestions, please don't hesitate to reach out. Happy coding!
